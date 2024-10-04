@@ -3,7 +3,7 @@ import SneakerCard from "./SneakerCard";
 import axios from "axios";
 import "../styles/MenPage.css";
 
-const MenPage = ({ handleCart,handleAddToCart }) => {
+const MenPage = ({ handleCart, handleAddToCart }) => {
   const [brandFilter, setBrandFilter] = useState("All");
   const [sortOption, setSortOption] = useState("lowToHigh");
   const [currentPage, setCurrentPage] = useState(1);
@@ -14,9 +14,7 @@ const MenPage = ({ handleCart,handleAddToCart }) => {
   useEffect(() => {
     const fetchMenSneakers = async () => {
       try {
-        const response = await axios.get(
-          "http://localhost:5000/api/sneakers/men"
-        );
+        const response = await axios.get("http://localhost:5000/api/sneakers/men");
         setMenSneakers(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -40,7 +38,6 @@ const MenPage = ({ handleCart,handleAddToCart }) => {
   };
 
   const handleCategoryChange = (category) => {
-    // Toggle the selected category
     if (selectedCategories.includes(category)) {
       setSelectedCategories((prevCategories) =>
         prevCategories.filter((c) => c !== category)
@@ -90,7 +87,7 @@ const MenPage = ({ handleCart,handleAddToCart }) => {
   const totalPages = Math.ceil(filteredSneakers.length / sneakersPerPage);
 
   return (
-    <div className="men-sneaker-collection" style={{ display: "flex" }}>
+    <div className="men-sneaker-collection">
       <div className="sidebar">
         <h2>Filter by Brand</h2>
         <ul>
@@ -106,43 +103,43 @@ const MenPage = ({ handleCart,handleAddToCart }) => {
           <option value="highToLow">Price: High to Low</option>
         </select>
         <div className="category-filter">
-        <h2>Filter by Category</h2>
-        <label>
-          <input
-            type="checkbox"
-            value="Classic"
-            checked={isCategorySelected("Classic")}
-            onChange={() => handleCategoryChange("Classic")}
-          />
-          Classic
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            value="Training"
-            checked={isCategorySelected("Training")}
-            onChange={() => handleCategoryChange("Training")}
-          />
-          Training
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            value="Running"
-            checked={isCategorySelected("Running")}
-            onChange={() => handleCategoryChange("Running")}
-          />
-          Running
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            value="Basketball"
-            checked={isCategorySelected("Basketball")}
-            onChange={() => handleCategoryChange("Basketball")}
-          />
-          Basketball
-        </label>
+          <h2>Filter by Category</h2>
+          <label>
+            <input
+              type="checkbox"
+              value="Classic"
+              checked={isCategorySelected("Classic")}
+              onChange={() => handleCategoryChange("Classic")}
+            />
+            Classic
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              value="Training"
+              checked={isCategorySelected("Training")}
+              onChange={() => handleCategoryChange("Training")}
+            />
+            Training
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              value="Running"
+              checked={isCategorySelected("Running")}
+              onChange={() => handleCategoryChange("Running")}
+            />
+            Running
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              value="Basketball"
+              checked={isCategorySelected("Basketball")}
+              onChange={() => handleCategoryChange("Basketball")}
+            />
+            Basketball
+          </label>
         </div>
       </div>
       <div className="sneaker-list">
@@ -167,9 +164,7 @@ const MenPage = ({ handleCart,handleAddToCart }) => {
           {Array.from({ length: totalPages }).map((_, index) => (
             <span
               key={index}
-              className={`page-number ${
-                currentPage === index + 1 ? "active" : ""
-              }`}
+              className={`page-number ${currentPage === index + 1 ? "active" : ""}`}
               onClick={() => handlePageChange(index + 1)}
             >
               {index + 1}

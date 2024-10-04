@@ -48,6 +48,34 @@
   position: relative;
 }
 
+.cart-icon-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.cart-icon {
+  width: 24px; /* Adjust as per your icon size */
+  height: 24px; /* Adjust as per your icon size */
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px; /* Positioning it above the cart icon */
+  right: -8px; /* Align it to the right of the cart icon */
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  line-height: 1; /* Ensure the text is centered */
+  font-weight: bold; /* Make the count bold */
+  z-index: 2; /* Ensure it's on top of other elements */
+}
+
 .cart-dropdown {
   position: absolute;
   top: 50px;
@@ -133,27 +161,6 @@
   background-color: #f0f0f0;
 }
 
-.cart-icon {
-  width: 24px; /* Adjust as per your icon size */
-  height: 24px; /* Adjust as per your icon size */
-  cursor: pointer;
-}
-
 .added-to-cart {
   fill: red; /* Change color to red */
-}
-
-.cart-count {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: red;
-  color: white;
-  font-size: 12px;
-  width: 18px;
-  height: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
 }

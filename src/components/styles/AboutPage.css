@@ -1,77 +1,75 @@
-
 .about-page {
-  font-family: Arial, sans-serif;
-  color: #333;
+  padding: 40px;
+  text-align: center; /* Center-align text */
 }
 
-/* Hero section styling */
-.hero-section {
+.about-heading {
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+
+.mission-section,
+.vision-section {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f9f9f9;
-  padding: 50px;
+  align-items: center; /* Center items vertically */
+  margin: 40px 0; /* Add margin between sections */
 }
 
-.hero-content {
-  flex: 1;
-  max-width: 50%;
+.mission-content,
+.vision-content {
+  flex: 1; /* Allow text content to grow */
+  padding: 20px;
 }
 
-.hero-image {
-  max-width: 45%;
-  border-radius: 10px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Passion section styling */
-.passion-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px;
-  background-color: #f0f0f0;
-}
-
-.passion-content {
-  flex: 1;
-  max-width: 50%;
-}
-
-.passion-image {
-  max-width: 45%;
-  border-radius: 10px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-}
-
-
-.mission-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px;
-  background-color: #f9f9f9;
-}
-
-.mission-content {
-  flex: 1;
-  max-width: 50%;
-}
-
-.mission-image {
-  max-width: 45%;
-  border-radius: 10px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-}
-
-.about-text  {
-  color: #ff6600;
-  font-size: 36px;
+.section-heading {
+  font-size: 32px;
   margin-bottom: 20px;
 }
 
-.about-p {
-  font-size: 18px;
-  line-height: 1.5;
-  margin-bottom: 20px;
+.section-image {
+  max-width: 100%; /* Ensure images are responsive */
+  height: auto; /* Maintain aspect ratio */
+  flex: 1; /* Allow images to grow */
+  margin: 20px; /* Add margin around images */
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .mission-section,
+  .vision-section {
+      flex-direction: column; /* Stack elements on small screens */
+      text-align: center; /* Center-align text */
+  }
+
+  .mission-content {
+      order: 1; /* Show mission text first */
+  }
+
+  .section-image {
+      max-width: 90%; /* Adjust image size for mobile */
+      margin: 0 auto; /* Center images */
+  }
+
+  .vision-content {
+      order: 4; /* Show vision text last */
+  }
+
+  .vision-section {
+      flex-direction: column; /* Ensure vision section is also stacked */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-heading {
+      font-size: 32px; /* Smaller heading for mobile screens */
+  }
+
+  .section-heading {
+      font-size: 20px; /* Smaller section heading for mobile */
+  }
+
+  .section-image {
+      max-width: 95%; /* Further adjust image size for mobile */
+  }
 }

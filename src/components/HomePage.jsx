@@ -8,6 +8,7 @@ import "./styles/HomePage.css";
 import HeroSection from "./HeroSection";
 import NewArrivals from "./NewArrivals";
 import UniqueCollections from "./UniqueCollections";
+import FollowUs from "./FollowUs ";
 
 const Homepage = () => {
   return (
@@ -21,7 +22,8 @@ const Homepage = () => {
         {/* About */}
         <UniqueCollections />
 
-  
+  {/* FolowUS */}
+  <FollowUs/>
       {/* Testimonials Section */}
       <motion.section
         className="testimonials-section"

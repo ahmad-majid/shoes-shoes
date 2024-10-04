@@ -31,10 +31,6 @@
   transition: color 0.3s;
 }
 
-.sidebar li:hover {
-  color: #f37121; /* Highlight color on hover */
-}
-
 .category-filter {
   margin-top: 20px;
 }
@@ -65,8 +61,49 @@
   margin-bottom: 20px;
 }
 
+.sneaker-cards {
+  display: grid; /* Changed from flex to grid */
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px; /* Space between cards */
+}
 
+.sneaker-card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  /* Remove hover effect */
+  transition: none; /* Disable hover effect */
+}
 
+.sneaker-card img {
+  width: 100%; /* Ensures image fills the card width */
+  height: auto; /* Maintains aspect ratio */
+  max-height: 200px; /* Set a maximum height for the images */
+  object-fit: contain; /* Adjusts the image to fit without distortion */
+}
+
+.sneaker-card .sneaker-info {
+  font-size: 14px; /* Set a consistent font size */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center text vertically */
+  text-align: center; /* Center text horizontally */
+  overflow: hidden; /* Hide overflow */
+  white-space: nowrap; /* Prevent text from wrapping */
+  text-overflow: ellipsis; /* Show ellipsis for overflow text */
+}
+
+.sneaker-card .sneaker-name {
+  font-weight: bold; /* Bold name */
+}
+
+.sneaker-card .sneaker-price {
+  color: #f37121; /* Price color */
+}
+
+/* Pagination styles remain unchanged */
 .pagination {
   margin-top: 20px;
   display: flex;
@@ -102,8 +139,15 @@
   color: #fff;
 }
 
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .sneaker-cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+}
+
 @media (max-width: 768px) {
-  .sneaker-card {
-    flex: 0 1 calc(50% - 20px);
+  .sneaker-cards {
+    grid-template-columns: 1fr; /* 1 column on small screens */
   }
 }

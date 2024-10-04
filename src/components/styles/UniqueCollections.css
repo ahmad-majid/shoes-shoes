@@ -1,9 +1,22 @@
+/* Animation for fade-in and slide-up effect */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Slide up from 20px below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at normal position */
+    }
+}
+
 .unique-collections {
-    background-color: black; /* Set background to black */
-    color: white; /* Set text color to white */
+    background-color: black;
+    color: white;
     padding: 60px 20px;
-    text-align: left; /* Align text to the left */
+    text-align: left;
     display: flex;
+    margin-top: 3rem;
 }
 
 .bg-layers {
@@ -13,7 +26,7 @@
 .bg-media {
     background-size: cover;
     background-position: center;
-    height: 300px; /* Adjust as needed */
+    height: 300px;
     position: absolute;
     top: 0;
     left: 0;
@@ -26,7 +39,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    z-index: 2; /* Ensures content is above the background */
+    z-index: 2;
 }
 
 .column-strip {
@@ -42,21 +55,31 @@
 }
 
 .left-column {
-    flex: 1; /* Adjust width for left column */
+    flex: 1;
 }
 
 .right-column {
-    flex: 1; /* Adjust width for right column */
+    flex: 1;
 }
 
+/* Animation for Collection Title */
 .collection-title {
     font-size: 64px;
     margin-bottom: 10px;
+    animation: fadeInUp 1s ease-in-out; /* Apply fade-in and slide-up animation */
+    animation-delay: 0.2s; /* Delay animation for smoother effect */
+    opacity: 0; /* Start hidden */
+    animation-fill-mode: forwards; /* Keep the final state */
 }
 
+/* Animation for Collection Subtitle */
 .collection-subtitle {
     font-size: 24px;
-    color: lightgray; /* Subtitle color */
+    color: lightgray;
+    animation: fadeInUp 1s ease-in-out;
+    animation-delay: 0.4s; /* Subtitle animates after the title */
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 
 .collection-description {
@@ -66,64 +89,61 @@
 
 .learn-more-button {
     padding: 10px 20px;
-    background-color: black; /* Black background */
-    color: white; /* White text */
-    border: 2px solid white; /* White border */
+    background-color: black;
+    color: white;
+    border: 2px solid white;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s; /* Transition for hover effect */
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .learn-more-button:hover {
-    background-color: white; /* White background on hover */
-    color: black; /* Black text on hover */
+    background-color: white;
+    color: black;
 }
 
 /* Media Queries */
-
-/* For tablets (max-width: 768px) */
 @media (max-width: 768px) {
     .unique-collections {
-        flex-direction: column; /* Stack elements vertically */
-        padding: 40px 10px; /* Reduce padding for smaller screens */
+        flex-direction: column;
+        padding: 40px 10px;
     }
 
     .grid-container {
-        flex-direction: column; /* Stack columns vertically */
+        flex-direction: column;
     }
 
     .collection-title {
-        font-size: 48px; /* Adjust title size for tablets */
+        font-size: 48px;
     }
 
     .collection-subtitle {
-        font-size: 20px; /* Adjust subtitle size for tablets */
+        font-size: 20px;
     }
 
     .collection-description {
-        font-size: 14px; /* Adjust description size for tablets */
+        font-size: 14px;
     }
 
     .learn-more-button {
-        padding: 8px 16px; /* Smaller padding for tablets */
+        padding: 8px 16px;
     }
 }
 
-/* For mobile devices (max-width: 480px) */
 @media (max-width: 480px) {
     .collection-title {
-        font-size: 36px; /* Adjust title size for mobile */
+        font-size: 36px;
     }
 
     .collection-subtitle {
-        font-size: 18px; /* Adjust subtitle size for mobile */
+        font-size: 18px;
     }
 
     .collection-description {
-        font-size: 12px; /* Adjust description size for mobile */
+        font-size: 12px;
     }
 
     .learn-more-button {
-        padding: 6px 12px; /* Smaller padding for mobile */
+        padding: 6px 12px;
     }
 }

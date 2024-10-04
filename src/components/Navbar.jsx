@@ -45,7 +45,7 @@ const Navbar = ({
   return (
     <nav className="navbar">
       <div className="logo">
-        <Link to="/">MK Studio</Link>
+        <Link to="/">SNEAKERS X</Link>
       </div>
       <ul className="nav-links">
         <li>
@@ -56,12 +56,6 @@ const Navbar = ({
         </li>
         <li>
           <Link to="/women">Women</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/contact" className="contact-button">Contact</Link>
         </li>
       </ul>
       <div className="cart-container">
@@ -107,7 +101,11 @@ const Navbar = ({
                 <button onClick={closeCart} className="close-cart-button">
                   Close Cart
                 </button>
-                <Link to="/cart" className="view-cart-link">
+                <Link 
+                  to="/cart" 
+                  className="view-cart-link" 
+                  onClick={closeCart} // Close cart when navigating
+                >
                   View Cart
                 </Link>
               </div>

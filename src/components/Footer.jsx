@@ -156,7 +156,7 @@ function SneakerFooter() {
 
       {/* Copyright text */}
       <div className="copyright-text">
-        © {currentYear} SNEAKERS - All Right Reserved
+        © {currentYear} SNEAKERS X - All Right Reserved
       </div>
     </footer>
   );
