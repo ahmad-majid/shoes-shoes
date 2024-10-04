@@ -1,0 +1,109 @@
+/* MenPage.css */
+
+.men-sneaker-collection {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.sidebar {
+  flex: 1;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 8px;
+  transition: color 0.3s;
+}
+
+.sidebar li:hover {
+  color: #f37121; /* Highlight color on hover */
+}
+
+.category-filter {
+  margin-top: 20px;
+}
+
+.category-filter h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.category-filter label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.category-filter input[type="checkbox"] {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.sneaker-list {
+  flex: 3;
+  padding: 20px;
+}
+
+.sneaker-list h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination button {
+  font-size: 16px;
+  border: 1px solid #d0d0d0;
+  padding: 5px 10px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination button:hover {
+  background-color: #f37121; /* Highlight color on hover */
+  color: #fff;
+}
+
+.page-number {
+  font-size: 16px;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.page-number.active {
+  background-color: #f37121; /* Active page color */
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .sneaker-card {
+    flex: 0 1 calc(50% - 20px);
+  }
+}

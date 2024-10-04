@@ -1,0 +1,129 @@
+.unique-collections {
+    background-color: black; /* Set background to black */
+    color: white; /* Set text color to white */
+    padding: 60px 20px;
+    text-align: left; /* Align text to the left */
+    display: flex;
+}
+
+.bg-layers {
+    position: relative;
+}
+
+.bg-media {
+    background-size: cover;
+    background-position: center;
+    height: 300px; /* Adjust as needed */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    z-index: 2; /* Ensures content is above the background */
+}
+
+.column-strip {
+    display: flex;
+    flex: 1;
+    margin: 10px;
+}
+
+.column {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.left-column {
+    flex: 1; /* Adjust width for left column */
+}
+
+.right-column {
+    flex: 1; /* Adjust width for right column */
+}
+
+.collection-title {
+    font-size: 64px;
+    margin-bottom: 10px;
+}
+
+.collection-subtitle {
+    font-size: 24px;
+    color: lightgray; /* Subtitle color */
+}
+
+.collection-description {
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.learn-more-button {
+    padding: 10px 20px;
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    border: 2px solid white; /* White border */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Transition for hover effect */
+}
+
+.learn-more-button:hover {
+    background-color: white; /* White background on hover */
+    color: black; /* Black text on hover */
+}
+
+/* Media Queries */
+
+/* For tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .unique-collections {
+        flex-direction: column; /* Stack elements vertically */
+        padding: 40px 10px; /* Reduce padding for smaller screens */
+    }
+
+    .grid-container {
+        flex-direction: column; /* Stack columns vertically */
+    }
+
+    .collection-title {
+        font-size: 48px; /* Adjust title size for tablets */
+    }
+
+    .collection-subtitle {
+        font-size: 20px; /* Adjust subtitle size for tablets */
+    }
+
+    .collection-description {
+        font-size: 14px; /* Adjust description size for tablets */
+    }
+
+    .learn-more-button {
+        padding: 8px 16px; /* Smaller padding for tablets */
+    }
+}
+
+/* For mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .collection-title {
+        font-size: 36px; /* Adjust title size for mobile */
+    }
+
+    .collection-subtitle {
+        font-size: 18px; /* Adjust subtitle size for mobile */
+    }
+
+    .collection-description {
+        font-size: 12px; /* Adjust description size for mobile */
+    }
+
+    .learn-more-button {
+        padding: 6px 12px; /* Smaller padding for mobile */
+    }
+}

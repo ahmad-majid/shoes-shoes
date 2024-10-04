@@ -1,0 +1,74 @@
+.sneaker-cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+  object-fit: contain;
+}
+
+.sneaker-card {
+  width: calc(33.33% - 20px);
+  height: 350px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  object-fit: contain;
+}
+
+.sneaker-image {
+  max-width: 200px;
+  max-height: 150px;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.sneaker-title {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #333;
+  white-space: nowrap; /* Prevent line breaks */
+  overflow: hidden; /* Hide overflowed text */
+  text-overflow: ellipsis; /* Display ... for overflowed text */
+}
+
+.sneaker-brand {
+  font-size: 1rem;
+  color: #777;
+}
+
+.sneaker-price {
+  font-size: 1rem;
+  color: #777;
+}
+
+.add-to-cart-button {
+  background-color: #ff5733;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-to-cart-button:hover {
+  background-color: #e64c00;
+}
+@media (max-width: 768px) {
+  .sneaker-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .sneaker-card {
+    width: calc(100% - 20px);
+  }
+}
