@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/sneaker-store-frontend/static/css/main.49818000.css",
+    "main.js": "/sneaker-store-frontend/static/js/main.728a14f0.js",
+    "static/media/12.jpg": "/sneaker-store-frontend/static/media/12.bdff1f165e31e7256ebd.jpg",
+    "static/media/3.jpg": "/sneaker-store-frontend/static/media/3.f37980ee8186291415d4.jpg",
+    "static/media/8.jpg": "/sneaker-store-frontend/static/media/8.ab94c2ebca8ff14c04e9.jpg",
+    "static/media/2.jpg": "/sneaker-store-frontend/static/media/2.1a7adc7e4ec6b68fe930.jpg",
+    "static/media/9.jpg": "/sneaker-store-frontend/static/media/9.d8d35fda54ecf2858c79.jpg",
+    "static/media/6.avif": "/sneaker-store-frontend/static/media/6.ccb4da712edd159d6dd7.avif",
+    "static/media/11.jpg": "/sneaker-store-frontend/static/media/11.fb8a2dc28588d4b15fe7.jpg",
+    "static/media/7.avif": "/sneaker-store-frontend/static/media/7.9d56ca901bb8c54aa1d7.avif",
+    "static/media/10.jpg": "/sneaker-store-frontend/static/media/10.70d51b1a6e547e74bb6e.jpg",
+    "static/media/5.jpg": "/sneaker-store-frontend/static/media/5.681775f35204ed3b2d5a.jpg",
+    "static/media/4.avif": "/sneaker-store-frontend/static/media/4.0b26c02bf4c6b176a55f.avif",
+    "static/media/1.avif": "/sneaker-store-frontend/static/media/1.02351293308add56488f.avif",
+    "static/media/logo.svg": "/sneaker-store-frontend/static/media/logo.4fe9c1e86cf9bf600f0c239f6a6e5317.svg",
+    "index.html": "/sneaker-store-frontend/index.html",
+    "static/media/icon-cart.svg": "/sneaker-store-frontend/static/media/icon-cart.539ec608f50e707c94d583ec11acf99d.svg",
+    "static/media/icon-close.svg": "/sneaker-store-frontend/static/media/icon-close.c390448669f3a8a4c4b2ada2f9938959.svg",
+    "main.49818000.css.map": "/sneaker-store-frontend/static/css/main.49818000.css.map",
+    "main.728a14f0.js.map": "/sneaker-store-frontend/static/js/main.728a14f0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.49818000.css",
+    "static/js/main.728a14f0.js"
+  ]
+}
